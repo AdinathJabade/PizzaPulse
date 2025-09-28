@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PizzaPulse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">
+          <span class="logo-mark" aria-hidden="true">🍕</span>
+          <span class="logo-text">PizzaPulse</span>
+        </a>
+
+        <div class="header-right">
+          <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+            <a href="#menu">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#how">How it works</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="btn btn-primary" href="#order">Order Now</a>
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="mainNav"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero (above the fold) -->
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>PizzaPulse — Fresh pizza delivered fast</h1>
+            <p class="lead">
+              Hand‑stretched dough · Local ingredients · 30–45 min delivery
+            </p>
+            <p class="hero-ctas">
+              <a class="btn btn-primary" href="#order">Order Now</a>
+              <a class="btn btn-ghost" href="#menu">View Menu</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features / Why choose us -->
+      <section id="features" class="features">
+        <div class="container">
+          <div class="features-header">
+            <h2>Why choose PizzaPulse?</h2>
+            <p class="muted">
+              Fresh ingredients, speedy delivery, and a simple ordering
+              experience — pizza how it should be.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">⚡</div>
+              <h3>Fast delivery</h3>
+              <p>
+                30–45 minute delivery window, tracked in real time so your pizza
+                arrives hot.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🍅</div>
+              <h3>Fresh ingredients</h3>
+              <p>
+                Locally sourced produce, house-made sauce, and hand-stretched
+                dough for every pizza.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🧾</div>
+              <h3>Easy ordering</h3>
+              <p>
+                Saved favorites, quick checkout, and multiple payment options —
+                order in a few taps.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu preview -->
+      <section id="menu" class="menu">
+        <div class="container">
+          <h2 class="section-title">Menu preview</h2>
+          <div class="menu-grid">
+            <article class="menu-item">
+              <img
+                class="menu-img"
+                src="images/margherita.jpg"
+                alt="Margherita pizza"
+              />
+              <h4>Margherita</h4>
+              <p class="price">₹829</p>
+              <p class="desc">
+                San Marzano tomato, fior di latte, basil, extra virgin olive
+                oil.
+              </p>
+              <button class="btn btn-sm add-btn" data-item="Margherita">
+                Add
+              </button>
+            </article>
+
+            <article class="menu-item">
+              <img
+                class="menu-img"
+                src="images/Pepperoni Classic.jpg"
+                alt="Pepperoni pizza"
+              />
+              <h4>Pepperoni Classic</h4>
+              <p class="price">₹995</p>
+              <p class="desc">
+                Spicy pepperoni, mozzarella, smoky tomato sauce.
+              </p>
+              <button class="btn btn-sm add-btn" data-item="Pepperoni Classic">
+                Add
+              </button>
+            </article>
+
+            <article class="menu-item">
+              <img
+                class="menu-img"
+                src="images/Garden Veggie.jpg"
+                alt="Garden Veggie pizza"
+              />
+              <h4>Garden Veggie</h4>
+              <p class="price">₹911</p>
+              <p class="desc">
+                Roasted peppers, mushrooms, olives, red onion, tomato.
+              </p>
+              <button class="btn btn-sm add-btn" data-item="Garden Veggie">
+                Add
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="how">
+        <div class="container">
+          <div class="how-header">
+            <h2>How it works</h2>
+            <p class="muted">
+              Three simple steps to get your pizza — from our oven to your door.
+            </p>
+          </div>
+
+          <div class="how-grid">
+            <article class="how-step">
+              <div class="step-number">1</div>
+              <h3>Pick your pizza</h3>
+              <p>
+                Choose from our featured pizzas or build your own with fresh
+                toppings.
+              </p>
+            </article>
+
+            <article class="how-step">
+              <div class="step-number">2</div>
+              <h3>Checkout quickly</h3>
+              <p>
+                Fast checkout with card or cash on delivery and an option to
+                save favorites.
+              </p>
+            </article>
+
+            <article class="how-step">
+              <div class="step-number">3</div>
+              <h3>We deliver</h3>
+              <p>
+                Our chefs bake it fresh and our drivers bring it hot — track the
+                order in real time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA banner -->
+      <section id="cta" class="cta-banner">
+        <div class="container cta-inner">
+          <div class="cta-copy">
+            <h2>Craving pizza? Get it delivered hot to your door.</h2>
+            <p class="muted">
+              Order now and enjoy 10% off your first order. Use code
+              <strong>PULSE10</strong> at checkout.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="#order">Start your order</a>
+            <a class="btn btn-ghost" href="#menu">See the menu</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Order form / CTA -->
+      <section id="order">
+        <div class="container">
+          <!-- mini order form or CTA -->
+        </div>
+      </section>
+
+      <!-- Contact / footer info -->
+      <section id="contact" class="contact">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <h2>Contact us</h2>
+            <p class="muted">
+              Questions, catering requests, or feedback? We'd love to hear from
+              you.
+            </p>
+            <dl>
+              <dt>Address</dt>
+              <dd>123 Pulse Street, Foodsville</dd>
+              <dt>Hours</dt>
+              <dd>Daily 11:00 — 22:00</dd>
+              <dt>Email</dt>
+              <dd>
+                <a href="mailto:hello@pizzapulse.example"
+                  >hello@pizzapulse.example</a
+                >
+              </dd>
+            </dl>
+          </div>
+          <div class="contact-form">
+            <h3>Send us a message</h3>
+            <form id="contactForm">
+              <label for="cname">Name</label>
+              <input id="cname" name="name" type="text" required />
+              <label for="cemail">Email</label>
+              <input id="cemail" name="email" type="email" required />
+              <label for="cmessage">Message</label>
+              <textarea
+                id="cmessage"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+              <div style="margin-top: 10px">
+                <button type="submit" class="btn btn-primary">
+                  Send message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <small
+          >&copy; <span id="year">2025</span> PizzaPulse — All rights
+          reserved.</small
+        >
+        <nav class="footer-bottom-nav">
+          <a class="back-top" href="#hero">Back to top ↑</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // set current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // mobile nav toggle: toggle class on header and aria state
+      const navToggle = document.querySelector(".nav-toggle");
+      const siteHeader = document.querySelector(".site-header");
+      navToggle &&
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          navToggle.setAttribute("aria-expanded", String(!expanded));
+          siteHeader.classList.toggle("nav-open");
+        });
+
+      // contact form demo handler
+      document
+        .getElementById("contactForm")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thanks for your message — we will get back to you soon!");
+          this.reset();
+        });
+
+      // enable CSS smooth scrolling by adding class to html
+      document.documentElement.classList.add("smooth-scroll");
+
+      // close mobile nav when a link is clicked and perform smooth scroll fallback
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          // allow normal behaviour for external or empty hashes
+          const href = a.getAttribute("href");
+          if (!href || href === "#") return;
+          // close nav on small screens
+          if (siteHeader.classList.contains("nav-open")) {
+            siteHeader.classList.remove("nav-open");
+            navToggle && navToggle.setAttribute("aria-expanded", "false");
+          }
+          // fallback smooth scroll for older browsers
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
