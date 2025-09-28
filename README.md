@@ -32,19 +32,90 @@ python -m http.server 8000
 
 ## Git & GitHub (quick)
 Initialize and push your project to GitHub (PowerShell):
+# PizzaPulse
+
+PizzaPulse is a small, responsive static landing page prototype for a pizza delivery app. It's built with plain HTML, CSS, and a bit of client-side JavaScript (no backend). Use it as a visual prototype, experiment with layouts, or wire the forms and order buttons to a backend later.
+
+Quick highlights
+- Responsive header with mobile hamburger menu
+- Hero section with hero image (in `images/`)
+- Features, Menu preview, How it works, CTA banner, Contact form, and Footer
+- Small client-side scripts: mobile nav toggle, smooth scrolling, contact form demo handler
+
+---
+
+## Preview (local)
+
+Recommended: serve locally so relative URLs and images behave correctly.
+
+PowerShell (from the project folder):
 
 ```powershell
 Set-Location 'D:\Tasks\level1_task1'
-git init
+# If you have Python 3 installed
+python -m http.server 8000
+# Open http://localhost:8000 in your browser
+```
+
+Or simply open `index.html` in a browser for a quick look (some features like relative image loading or anchors work better when served).
+
+---
+
+## What is in this repo
+
+- `index.html` — main landing page markup. Sections are commented (hero, features, menu, how, cta, contact, footer).
+- `style.css` — main stylesheet with responsive rules and component styles.
+- `images/` — image assets used by the hero and menu preview.
+
+Images currently included (file names exactly as in the project):
+
+- `images/pizzaImage.avif` (hero background)
+- `images/Margherita.jpg`
+- `images/Pepperoni Classic.jpg`
+- `images/Garden Veggie.jpg`
+
+Note: the menu item `src` attributes in `index.html` reference these exact filenames. If you replace images, keep the names or update the `src` in `index.html`/`style.css`.
+
+---
+
+## Important behaviors (what the code does)
+
+- Mobile navigation: the hamburger toggles a `nav-open` class on the header and updates `aria-expanded`. CSS controls the dropdown layout.
+- Smooth scrolling: `document.documentElement.classList.add('smooth-scroll')` enables CSS `scroll-behavior`. Anchor clicks close the mobile nav and use `scrollIntoView({behavior:'smooth'})` as a fallback.
+- Contact form: demo handler intercepts the submit event, shows an alert and resets the form. There is no server-side processing.
+- Prices in the menu preview are shown in INR (₹) in `index.html` as static values.
+
+---
+
+## Quick customizations
+
+- Change the hero image: replace `images/pizzaImage.avif` or update the `background-image` URL in `style.css` (look for `.hero` rules).
+- Replace a menu image: swap the files in `images/` (e.g. replace `Margherita.jpg`) or update the `src` attributes in `index.html`.
+- Edit copy: open `index.html` and modify the section you want — sections are separated with HTML comments for convenience.
+
+If you want to wire the contact form to a backend or turn the 'Add' buttons into a working cart, I can add a small Node/Express example or a serverless function.
+
+---
+
+## Git & GitHub (quick commands)
+
+If you haven't already created a remote repository, you can create one manually on GitHub or use the `gh` CLI. This repo's suggested remote URL (based on the repo owner in the workspace) is:
+
+`https://github.com/AdinathJabade/PizzaPulse.git`
+
+PowerShell example to push (replace remote URL if different):
+
+```powershell
+Set-Location 'D:\Tasks\level1_task1'
+git init            # only if the repo isn't already initialized
 git add .
-git commit -m "Initial commit - PizzaPulse landing page"
-# create repo on GitHub.com first, then:
-git remote add origin https://github.com/YOURNAME/PizzaPulse.git
+git commit -m "Add PizzaPulse landing page"
+git remote add origin https://github.com/AdinathJabade/PizzaPulse.git
 git branch -M main
 git push -u origin main
 ```
 
-If you use GitHub CLI (`gh`):
+Using `gh` (GitHub CLI):
 
 ```powershell
 Set-Location 'D:\Tasks\level1_task1'
@@ -52,22 +123,30 @@ gh auth login
 gh repo create PizzaPulse --public --source=. --remote=origin --push
 ```
 
-## Publish with GitHub Pages
-1. In your GitHub repo, go to Settings → Pages.
-2. Choose branch `main` and root `/` and save. The site will become available at `https://<AdinathJabade>.github.io/PizzaPulse/`.
+---
 
-Or create a `gh-pages` branch and push the built site (for static HTML this is not necessary).
+## Publish via GitHub Pages
 
-## Contact form & ordering
-- The contact form and order buttons are client-side demo handlers (no backend). Use the scripts in `index.html` to see how they work. If you want, I can help wire them to a simple Node/Express endpoint or a serverless function.
-
-## Next steps / suggestions
-- Replace emoji icons with SVGs for polish.
-- Add a simple cart and backend to accept orders.
-- Optimize images (WebP/AVIF) and add lazy-loading for menu images.
-
-## License
-This project is provided as-is for learning and prototyping. Add a LICENSE file to declare terms (MIT recommended).
+1. Push your `main` branch to GitHub.
+2. On GitHub, go to Settings → Pages and select branch `main` and folder `/ (root)` and save.
+3. Your site will be available at `https://AdinathJabade.github.io/PizzaPulse/` (it may take a minute to publish).
 
 ---
-If you want, tell me your GitHub username and I’ll paste the exact `git` commands with your repo URL filled in, or I can create a `README` commit for you and push (if you give me the remote URL and confirm you want me to edit files).
+
+## Next steps / suggestions
+
+- Replace emoji icons with small SVG icons for a more polished look.
+- Add a simple client-side cart and persist to localStorage; then add a small API (Node/Express or serverless) to accept orders.
+- Optimize images (WebP/AVIF) and add `loading="lazy"` for menu item `<img>` tags.
+
+If you want, I can make any of the above changes and commit them for you.
+
+---
+
+## License
+
+Add a LICENSE file to declare terms (MIT recommended for open source). This repo currently contains no explicit license — add one if you plan to publish.
+
+---
+
+If you'd like, tell me which short project description you prefer for the GitHub repository metadata and I will insert it at the top of this README or prepare a commit with that short blurb.
